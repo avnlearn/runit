@@ -1,16 +1,17 @@
-[tool.poetry]
-name = "randunit"
-version = "0.1.0"
-description = "Random number generator"
-authors = ["AvN Learn <avnlearn@gmail.com>"]
-license = "MIT"
-readme = "README.md"
-
-[tool.poetry.dependencies]
-python = "^3.12"
-sympy = "^1.13.2"
-
-
 [build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "randunit"
+authors = [{ name = "AvN Learn", email = "avnlearn@gmail.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.11"
+dynamic = ["version", "description"]
+dependencies = ["sympy"]
+
+[project.urls]
+Documentation = "https://flit.pypa.io"
+Source = "https://github.com/pypa/flit"
